@@ -18,6 +18,7 @@ This repository contains my notes on the [Next.js](https://nextjs.org) framework
 * Image optimization
 * Internationalization
 * Automatic polyfills
+* [TypeScript support out of the box](https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
 
 ## Who created Next.js?
 `Next.js` was created by Vercel.
