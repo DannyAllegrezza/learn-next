@@ -23,3 +23,21 @@ This repository contains my notes on the [Next.js](https://nextjs.org) framework
 ## Who created Next.js?
 `Next.js` was created by Vercel.
 
+## Pages and routing
+🔗 [Docs](https://nextjs.org/docs/basic-features/pages)
+
+Similar to Gatsby, Next.js takes care of automatically creating routing for you based on directory/files placed inside of the `/pages` directory. 
+
+In Next.js, a page is a React Component exported from a `.js`, `.jsx`, `.ts`, or `.tsx` file in the pages directory. Each page is associated with a route based on its file name.
+
+Example: If you create `pages/about.js` that exports a React component like below, it will be accessible at `/about`.
+
+```js
+function About() {
+  return <div>About</div>
+}
+
+export default About
+```
+
+> NOTE: The component can have any name, but you must export it as a default export.
