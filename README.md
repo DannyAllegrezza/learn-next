@@ -41,3 +41,12 @@ export default About
 ```
 
 > NOTE: The component can have any name, but you must export it as a default export.
+
+### Navigation (`next/link` component)
+`Next.js` has a built in client-side routing paradigm, using the `<Link>` component. 
+
+```js
+  <Link href="/posts/first-post">
+    <a>Hello world</a>
+  </Link>
+```
