@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from 'next/image';
 import { useRouter } from "next/router";
 import { signOut, useSession } from "next-auth/client";
 
@@ -9,6 +10,7 @@ const Header: React.FC = () => {
     router.pathname === pathname;
 
   const [session, loading] = useSession();
+  console.log(session);
 
   let left = (
     <div className="left">
@@ -147,6 +149,14 @@ const Header: React.FC = () => {
     );
     right = (
       <div className="right">
+        <Image
+          priority
+          src={session.user.image}
+          className={'img'}
+          height={50}
+          width={50}
+          alt={session.user.name}
+        />
         <p>
           {session.user.name} ({session.user.email})
         </p>
@@ -183,6 +193,10 @@ const Header: React.FC = () => {
             border: 1px solid black;
             padding: 0.5rem 1rem;
             border-radius: 3px;
+          }
+
+          img {
+            border: 1px solid red;
           }
 
           button {
